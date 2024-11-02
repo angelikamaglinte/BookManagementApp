@@ -1,0 +1,14 @@
+/* Note: put here global css styling */
+/* TODO: use inter as your font */
+.layout-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
