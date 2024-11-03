@@ -67,7 +67,7 @@ const BookList = () => {
             <NavigationBar onSearch={onSearch} />
 
             {/* Display "Search Results" or "Book List" title */}
-            <p className="list-title">{isSearching ? "Search Results" : "Book List"}</p>
+            <p className="list-title">{isSearching ? "Search results" : "Book List"}</p>
 
             {isSearching && (
                 <div className="go-back-container">

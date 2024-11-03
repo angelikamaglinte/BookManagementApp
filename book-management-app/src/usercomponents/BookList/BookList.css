@@ -49,6 +49,10 @@ body {
     margin-right: 8px; 
 }
 
+.no-results-message {
+    font-size: 30px;
+    margin-bottom: 5%;
+}
 
 .book-list-container {
     display: flex;
