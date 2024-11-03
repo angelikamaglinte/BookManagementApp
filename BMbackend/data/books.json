@@ -398,13 +398,5 @@
     "description": "A spiritual novel that follows the journey of a young man in ancient India seeking enlightenment.",
     "publicationDate": "1922-09-06",
     "coverImage": "https://books.google.ca/books/content?id=putbK6p2o4sC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2HtTGnl5eABPpeH0BUEC5nh3lRWQ&w=1280"
-  },
-  {
-    "id": 51,
-    "title": "test",
-    "author": "test",
-    "description": "test",
-    "publicationDate": "2024-10-30",
-    "coverImage": "https://covers.openlibrary.org/b/id/8228691-L.jpg"
   }
 ]

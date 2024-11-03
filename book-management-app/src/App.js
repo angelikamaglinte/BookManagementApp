@@ -63,6 +63,8 @@ import AddBook from './components/AddBook/AddBook';
 import Sidebar from './components/Sidebar/Sidebar';
 import Dashboard from './components/Dashboard/Dashboard';
 import './App.css';
+import UserLandingPage from './userpages/UserLandingPage/UserLandingPage';
+import UserHomePage from './userpages/UserHomePage/UserHomePage';
 
 function App() {
     const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
@@ -84,7 +86,7 @@ function App() {
                                 <Route path="/dashboard" element={<Dashboard />} />
                                 <Route path="/booklist" element={<BookList />} />
                                 <Route path="/addbook" element={<AddBook />} />
-                                <Route path="*" element={<Navigate to="/dashboard" />} />
+                                {/* <Route path="*" element={<Navigate to="/dashboard" />} /> */}
                             </Routes>
                         </div>
                     </div>
@@ -92,10 +94,18 @@ function App() {
                     <Routes>
                         <Route path="/" element={<LandingPage />} />
                         <Route path="/login" element={<Login setIsAdminLoggedIn={setIsAdminLoggedIn} />} />
-                        <Route path="*" element={<Navigate to="/" />} />
+                        {/* <Route path="*" element={<Navigate to="/" />} /> */}
                     </Routes>
                 )}
+                {/* for user */}
+                <Routes>
+                    <Route path="/pagepilot" element={<UserLandingPage />} />
+                    <Route path="/pagepilot-home" element={<UserHomePage />} />
+                </Routes>
             </div>
+
+
+
         </Router>
     );
 }

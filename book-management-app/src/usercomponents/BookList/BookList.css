@@ -1,0 +1,165 @@
+body {
+    background: linear-gradient(180deg, #FFFFFF, #E0C0FD)
+}
+
+.list-title {
+    font-weight: bolder;
+    font-size: 70px;
+    margin-bottom: 4%;
+}
+
+.go-back-container {
+    width: 150px;
+    margin-bottom: 2%;
+}
+
+/* .go-back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 15px;
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+} */
+
+.go-back-button {
+    display: flex;
+    align-items: center; /* Center icon and text vertically */
+    padding: 15px;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 3%;
+}
+
+.go-back-button img {
+    height: 20px; 
+    margin-left: 8px;
+    margin-right: 8px; 
+}
+
+
+.book-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 100px;
+    border-radius: 50px;
+    background-color: #ffffff;
+}
+
+.book-card {
+    width: 300px;
+    height: 400px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.book-cover {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.book-info {
+    margin-top: 10px;
+}
+
+.see-more-container {
+    margin-top: 5%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.browse-our-collection {
+    font-weight: bolder;
+    font-size: 70px;
+}
+
+.continue-browsing {
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.see-more-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 15px;
+    width: 25%;
+    margin-top: 3%;
+    margin-bottom: 100px;
+}
+
+.see-more-button:hover {
+    background-color: #333;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-book-cover {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
