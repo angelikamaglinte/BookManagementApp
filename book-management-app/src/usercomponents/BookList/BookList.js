@@ -18,7 +18,7 @@ const BookList = () => {
             try {
                 const response = await axios.get('http://localhost:7000/books');
                 setBooks(response.data);
-                setFilteredBooks(response.data); 
+                setFilteredBooks(response.data);
             } catch (err) {
                 setError('Could not fetch books. Please try again later.');
                 console.error('Error fetching books:', err);
@@ -63,7 +63,7 @@ const BookList = () => {
 
     return (
         <div className="book-list-container">
-            
+
             <NavigationBar onSearch={onSearch} />
 
             {/* Display "Search Results" or "Book List" title */}
@@ -112,18 +112,23 @@ const BookList = () => {
                 </div>
             )}
 
-            
+
 
             {selectedBook && (
                 <div className="modal-overlay">
-                    <div className="modal" onClick={(e) => e.stopPropagation()}>
-                        <button className="close-button" onClick={closeModal}>×</button>
-                        <h2>{selectedBook.title}</h2>
-                        <p><strong>Author:</strong> {selectedBook.author}</p>
-                        <p><strong>Description:</strong> {selectedBook.description}</p>
-                        {selectedBook.coverImage && (
-                            <img src={selectedBook.coverImage} alt={`${selectedBook.title} cover`} className="modal-book-cover" />
-                        )}
+                    <div className="modal-container">
+                        <div className="modal" onClick={(e) => e.stopPropagation()}>
+                            <button className="close-button" onClick={closeModal}>×</button>
+                            {selectedBook.coverImage && (
+                                <img src={selectedBook.coverImage} alt={`${selectedBook.title} cover`} className="modal-book-cover" />
+                            )}
+                            <div className="details">
+                                <p className="title">{selectedBook.title}</p>
+                                <p className="author"><strong>Author:</strong> {selectedBook.author}</p>
+                                <p className="description">{selectedBook.description}</p>
+                                <p className="publication-date"><strong>Publication Date:</strong> {selectedBook.publicationDate}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}
