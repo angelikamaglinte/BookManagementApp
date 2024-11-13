@@ -2,9 +2,10 @@
 * {
   font-family: 'Inter', sans-serif;
 }
-#loginPageDiv{
-    background-color: white;
+div.loginPageDiv , html{
+    background-color: white;  
 }
+
 
 #login_page_image{
     border-radius: 7vh;
