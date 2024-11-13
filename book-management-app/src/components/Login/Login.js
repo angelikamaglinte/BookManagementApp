@@ -35,7 +35,7 @@ const Login = ({ setIsAdminLoggedIn }) => {
         <div className='loginPageDiv'>
             <img src={login_page_image} alt='' id='login_page_image'></img>
             
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='adminloginFields'>
             <h2 id='loginWelcomeMessage'>Welcome Back, Admin!</h2>
                 <input
                     type="text"
@@ -51,7 +51,7 @@ const Login = ({ setIsAdminLoggedIn }) => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
-                {error && <p id='errorMessage'>{error}</p>}
+                {error && <p id='adminErrorMessage'>{error}</p>}
                 <button type="submit">Login</button>
                 
             </form>
