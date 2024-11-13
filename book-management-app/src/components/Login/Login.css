@@ -26,15 +26,15 @@ div.loginPageDiv , html{
   margin-bottom: 10%;
 }
 
-form{
+form.adminloginFields{
     position: relative;
     top:30vh;
     left: 16.90%;
     width: 20%;
 }
 
-form input[type="text"],
-form input[type="password"] {
+form.adminloginFields input[type="text"],
+form.adminloginFields input[type="password"] {
   width: 100%;
   padding: 10px 0;
   border: none;
@@ -45,7 +45,7 @@ form input[type="password"] {
   margin-bottom: 10%; 
 }
 
-form button[type="submit"] {
+form.adminloginFields button[type="submit"] {
 
     width: 100%;
     padding: 10px;
@@ -59,18 +59,18 @@ form button[type="submit"] {
 
   }
   
-  form input[type="text"]::placeholder,
-  form input[type="password"]::placeholder {
+  form.adminloginFields input[type="text"]::placeholder,
+  form.adminloginFields input[type="password"]::placeholder {
     padding-left: 10px; 
     color: #757575;   
   }
 
-  form button[type="submit"]:hover {
+  form.adminloginFields button[type="submit"]:hover {
     background-color: lightgray;
     color: black;
   }
 
-  #errorMessage{
+  #adminErrorMessage{
     color: red;
     width: 100%;
     position: relative;
