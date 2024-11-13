@@ -1,1 +1,3 @@
-/* hello */
+.landingPageContainer, html {
+    background-color: aqua;
+}
