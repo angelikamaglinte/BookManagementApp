@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from '../../axiosConfig';
+import './Login.css';
+import login_page_image from '../../assets/login_Page_Image.jpg'
 
 const Login = ({ setIsAdminLoggedIn }) => {
     const [username, setUsername] = useState('');
@@ -31,8 +33,10 @@ const Login = ({ setIsAdminLoggedIn }) => {
 
     return (
         <div>
-            <h2>Login</h2>
+            <img src={login_page_image} alt='' id='login_page_image'></img>
+            
             <form onSubmit={handleSubmit}>
+            <h2 id='loginWelcomeMessage'>Welcome Back, Admin!</h2>
                 <input
                     type="text"
                     placeholder="Username"
@@ -47,9 +51,11 @@ const Login = ({ setIsAdminLoggedIn }) => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
+                {error && <p id='errorMessage'>{error}</p>}
                 <button type="submit">Login</button>
+                
             </form>
-            {error && <p>{error}</p>}
+         
         </div>
     );
 };
