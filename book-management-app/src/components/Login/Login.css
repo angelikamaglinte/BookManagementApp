@@ -2,7 +2,7 @@
 * {
   font-family: 'Inter', sans-serif;
 }
-div, html{
+#loginPageDiv{
     background-color: white;
 }
 

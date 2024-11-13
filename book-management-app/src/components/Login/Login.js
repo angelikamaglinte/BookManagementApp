@@ -32,7 +32,7 @@ const Login = ({ setIsAdminLoggedIn }) => {
     };
 
     return (
-        <div>
+        <div className='loginPageDiv'>
             <img src={login_page_image} alt='' id='login_page_image'></img>
             
             <form onSubmit={handleSubmit}>
