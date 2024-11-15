@@ -1,65 +1,82 @@
-/* Sidebar.css
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 200px;
-    height: 100%;
-    background-color: #333;
-    padding: 20px;
-    color: white;
-  }
-  
-  .sidebar h2 {
-    color: #fff;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    margin: 15px 0;
-  }
-  
-  .sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .sidebar ul li a:hover {
-    color: #ccc;
-  }
-   */
-
-/* Sidebar.css */
-.sidebar {
-  width: 250px;
-  background-color: #f8f9fa;
-  padding: 20px;
-  height: 100vh;
-  /* Ensure the sidebar takes the full height of the viewport */
-  position: sticky;
-  top: 0;
+/* Sidebar logo *//* Main content container */
+div.main-content {
+  margin-left: 250px; /* Matches the width of the sidebar */
+  padding-left: 2% ; /* Optional: Add some padding for spacing */
 }
 
+#adminSidebarLogo {
+  width: 50%;
+  margin-bottom: 8%;
+}
+
+/* Sidebar container styling */
+div.sidebar {
+  background-color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 200px; /* Set a fixed width for sidebar */
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Layout container adjustment */
+div.layout-container {
+  width: 100%; /* Use full width of the screen or adjust as needed */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Sidebar list styling */
 .sidebar ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  
 }
 
+/* Sidebar list item */
 .sidebar ul li {
-  margin: 15px 0;
+  /* margin: 10px 0; Space between items */
+  display: flex;
+  align-items: center;
 }
 
+/* Sidebar link styling for both active and non-active states */
 .sidebar ul li a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  border-radius: 5px;
+  justify-content: flex-start;
+  transition: background-color 0.1s ease, color 0.1s linear;
 }
 
+/* Background and color for active link */
 .sidebar ul li a.active {
-  color: #007bff;
+  color: white;
+  background-color: #1E1E1E;
 }
+
+/* Sidebar icon styling for consistent size and spacing */
+.sidebarIcons {
+  height: 15px;
+  margin-left: 20%;
+  padding-right: 5%;
+  transition: filter 0.1s ease; /* Smooth transition for icon color change */
+}
+
+/* Invert icon color in active state */
+.sidebar ul li a.active .sidebarIcons {
+  filter: invert(1);
+}
+
+/* div.sidebarTabContainer{
+  position: fixed;
+  width: 13%;
+} */
+/* Adjust position for active tab text */

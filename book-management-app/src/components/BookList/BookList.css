@@ -1,3 +1,11 @@
-* {
-    font-family: 'Times New Roman', Times, serif;
+
+.adminBookList{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.booklistTitle{
+    margin-left:  2%;
+    padding-top: 1%;
 }

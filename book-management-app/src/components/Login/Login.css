@@ -10,8 +10,9 @@ div.loginPageDiv , html{
 #login_page_image{
     border-radius: 7vh;
     padding: 1%;
-    width: 48vw;            
-    height: 100vh; 
+    width: 45vw;            
+    height: 90vh; 
+    margin-right: 1%;
     position: relative;
     float: right;          
     object-fit: cover;      

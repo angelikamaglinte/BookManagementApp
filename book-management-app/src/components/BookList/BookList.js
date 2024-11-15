@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from '../../axiosConfig';
 import DeleteConfirmationModal from '../DeleteBook/DeleteConfirmationModal';
 import UpdateBookModal from '../UpdateBook/UpdateConfirmationModal';
+import './BookList.css'
 // import { toast } from 'react-toastify';
 
 const BookList = () => {
@@ -54,8 +55,8 @@ const BookList = () => {
     };
 
     return (
-        <div>
-            <h2>Book List</h2>
+        <div className='adminBookList'>
+            <h2 className='booklistTitle'>Book List</h2>
             <ol>
                 {books.map((book) => (
                     <li key={book.id}>
