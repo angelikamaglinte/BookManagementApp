@@ -1,4 +1,5 @@
 .logoutButton{
+    border: none;
 font-weight: bold;
 color: white;
 background-color: black;
@@ -7,6 +8,10 @@ padding-top: 8px;
 padding-bottom: 8px;
 padding-right: 15px;
 padding-left: 15px;
-position: relative;
-left: 152.25vh;
+float: right;
+}
+
+.logoutButton:hover{
+ background-color: lightgray;
+ color: black;
 }

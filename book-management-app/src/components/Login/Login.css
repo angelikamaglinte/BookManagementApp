@@ -6,17 +6,16 @@ div.loginPageDiv , html{
     background-color: white;  
 }
 
-
-#login_page_image{
-    border-radius: 7vh;
-    padding: 1%;
-    width: 45vw;            
-    height: 90vh; 
-    margin-right: 1%;
-    position: relative;
-    float: right;          
-    object-fit: cover;      
-  
+#login_page_image {
+  border-radius: 7vh;
+  padding: 1%;
+  width: 45vw;
+  height: 90vh;
+  position: absolute; /* Allow precise positioning */
+  top: 50%; /* Move the image down to the vertical center */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  right: 1%; /* Keep the image aligned to the right */
+  object-fit: cover;
 }
 
 #loginWelcomeMessage{
@@ -27,12 +26,14 @@ div.loginPageDiv , html{
   margin-bottom: 10%;
 }
 
-form.adminloginFields{
-    position: relative;
-    top:30vh;
-    left: 16.90%;
-    width: 20%;
+form.adminloginFields {
+  margin-left: 20%;
+  width: 20%;
+  position: absolute; /* Allows precise positioning */
+  top: 50%; /* Move the form down to the center */
+  transform: translateY(-50%); /* Adjust for vertical centering */
 }
+
 
 form.adminloginFields input[type="text"],
 form.adminloginFields input[type="password"] {
