@@ -9,3 +9,92 @@
     margin-left:  2%;
     padding-top: 1%;
 }
+
+.booklistTitle2{
+    display: flex; /* Makes the children align horizontally */
+    padding-left: 4.5%;
+    border-bottom: white solid 1px;
+  
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#serialNo{
+    margin-left: -2%;
+    padding-right: 8%;
+}
+#image{
+    padding-right: 25%;
+}
+#bookName{
+    padding-right: 40%;
+}
+
+
+/* Book list container */
+.adminBookList ol {
+    counter-reset: book-counter; /* Initialize counter */
+    padding: 0;
+  }
+  
+  /* Each book item */
+  .adminBookList li {
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the left */
+    margin-bottom:5%; /* Space between rows */
+    margin-left: 3.5%;
+    padding: 10px;
+    padding-top: 20px;
+    position: relative; /* For custom numbering */
+  }
+  
+  .adminBookList li::before {
+    margin-left: 6%;
+    content: counter(book-counter) ". "; /* Add counter value */
+    counter-increment: book-counter; /* Increment counter for each item */
+ /* Space between number and content */
+    color: white;
+    font-size: 16px;
+  }
+  
+  /* Image styling */
+  .adminBookList img {
+    /* Space between image and text */
+    margin-right: 16.5%;
+    margin-left: 10%;
+  }
+  
+  /* Book details */
+  .adminBookList p {
+    flex-grow: 1; /* Allow the text to take up remaining space */
+    margin: 0; /* Remove default margins */
+    text-align: left; /* Align text to the left */
+    line-height: 1.5; /* Adjust line height for better readability */
+    display: flex; /* Flexbox for internal alignment */
+    align-items: center; /* Center the text vertically */
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+/* Style for buttons in book list */
+.adminBookList button {
+  display: flex;
+  margin-right: 10vh;
+  width: 10vh;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 5px;
+  }
+  
+  /* Hover effect for buttons */
+  .adminBookList button:hover {
+    background-color: lightgray; 
+  }
+  
+.bookListButtons{
+    flex-direction: column;
+}
+
+
+

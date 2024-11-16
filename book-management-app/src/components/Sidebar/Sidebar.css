@@ -1,7 +1,9 @@
 /* Sidebar logo *//* Main content container */
 div.main-content {
   margin-left: 250px; /* Matches the width of the sidebar */
-  padding-left: 2% ; /* Optional: Add some padding for spacing */
+  padding-left: 2% ; 
+  padding-right: 2%;
+  background-color: white;
 }
 
 #adminSidebarLogo {
@@ -23,6 +25,7 @@ div.sidebar {
 
 /* Layout container adjustment */
 div.layout-container {
+  background-color:white;
   width: 100%; /* Use full width of the screen or adjust as needed */
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
