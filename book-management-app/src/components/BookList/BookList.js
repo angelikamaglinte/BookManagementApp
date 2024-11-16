@@ -57,6 +57,14 @@ const BookList = () => {
     return (
         <div className='adminBookList'>
             <h2 className='booklistTitle'>Book List</h2>
+
+            <div className='booklistTitle2'>
+            <h4 id='serialNo'>Serial No.</h4>
+            <h4 id='image'>Image</h4>
+            <h4 id='bookName'>Book Name</h4>
+            <h4 id='Actions'>Actions</h4>
+            </div>
+
             <ol>
                 {books.map((book) => (
                     <li key={book.id}>
@@ -70,8 +78,10 @@ const BookList = () => {
                             )}
                             {book.title} by {book.author}
                         </p>
+                        <div className='booklistButtons'>
                         <button onClick={() => handleEdit(book.id)}>Edit</button>
                         <button onClick={() => confirmDelete(book.id)}>Delete</button>
+                        </div>
                     </li>
                 ))}
             </ol>

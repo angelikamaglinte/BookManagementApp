@@ -1,0 +1,12 @@
+.logoutButton{
+font-weight: bold;
+color: white;
+background-color: black;
+border-radius: 5px;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-right: 15px;
+padding-left: 15px;
+position: relative;
+left: 152.25vh;
+}

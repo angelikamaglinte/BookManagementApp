@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import'./Logout.css'
 
 const Logout = ({ setIsAdminLoggedIn }) => {
     const navigate = useNavigate();
@@ -15,7 +16,7 @@ const Logout = ({ setIsAdminLoggedIn }) => {
 
     return (
         <div>
-            <button onClick={handleLogout}>Logout</button>
+            <button onClick={handleLogout} className='logoutButton'>Logout</button>
         </div>
     );
 };
