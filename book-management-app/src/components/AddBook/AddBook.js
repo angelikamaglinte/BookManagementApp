@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from '../../axiosConfig'
+import './AddBook.css'
 // import { useNavigate } from 'react-router-dom'
 // import { toast } from 'react-toastify'
 
@@ -46,10 +47,10 @@ const AddBook = () => {
 
     return (
         <div>
-            <h2>Add a New Book</h2>
-            <form onSubmit={HandleAddBook}>
+            <h2>Add a new book</h2>
+            <form className='addBookForm' onSubmit={HandleAddBook}>
                 <div>
-                    <label>Title:</label>
+                    <label>Title</label><br/>
                     <input
                         type="text"
                         value={title}
@@ -58,7 +59,7 @@ const AddBook = () => {
                     />
                 </div>
                 <div>
-                    <label>Author:</label>
+                    <label>Author</label><br/>
                     <input
                         type="text"
                         value={author}
@@ -67,33 +68,35 @@ const AddBook = () => {
                     />
                 </div>
                 <div>
-                    <label>Description:</label>
+                    <label>Description</label><br/>
                     <textarea
+                        className='textareaDescription'
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
                         required
                     />
                 </div>
                 <div>
-                    <label>Publication Date:</label>
+                    <label>Publication Date</label><br/>
                     <input
+                        className='publicationDate'
                         type="date"
                         value={publicationDate}
                         onChange={(e) => setPublicationDate(e.target.value)}
-                        required
+                        require
                     />
                 </div>
                 <div>
-                    <label>Cover Image URL:</label>
+                    <label>Cover Image URL</label><br/>
                     <input
                         type="text"
-                        placeholder="https://example.com/image.jpg"
+                        placeholder="https://example.com/image1231234.jpg"
                         value={coverImage}
                         onChange={(e) => setCoverImage(e.target.value)}
                         required
                     />
                 </div>
-                <button type="submit">Add Book</button>
+                <button type="submit" className='addBookButton'>Add Book</button>
             </form>
 
             {error && <p style={{ color: 'red' }}>{error}</p>}
