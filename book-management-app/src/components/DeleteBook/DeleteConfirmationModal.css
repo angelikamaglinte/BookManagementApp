@@ -1,27 +1,26 @@
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.modal-actions {
+    margin-top: 20px;
+    display: flex;  /* Use flexbox to handle alignment */
+    justify-content: center;  /* Center buttons horizontally */
+    align-items: center;  /* Center buttons vertically if they expand */
+    gap: 10px;  /* Add space between buttons */
+    padding-bottom: 5px;
+}
+.modal-actions button {
+    color: white;
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;  /* Center text inside buttons */
+    border-radius: 5px;  /* Optional: rounded corners for better aesthetics */
 }
 
-.modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+.modal-content{
     text-align: center;
 }
 
-.modal-actions {
-    margin-top: 20px;
-}
-
-.modal-actions button {
-    margin: 0 10px;
-    padding: 10px 20px;
+.modal-actions button:hover {
+    color: black;
+    background-color: lightgray;
 }

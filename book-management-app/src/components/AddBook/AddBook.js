@@ -32,7 +32,6 @@ const AddBook = () => {
             toast.success('Book added successfully!', {
             });
             console.log(response.data);
-
             // clear fields after successfully adding the book
             setTitle('');
             setAuthor('');

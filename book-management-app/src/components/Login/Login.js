@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import axios from '../../axiosConfig';
 import './Login.css';
 import login_page_image from '../../assets/login_Page_Image.jpg'
+import { toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = ({ setIsAdminLoggedIn }) => {
     const [username, setUsername] = useState('');
@@ -14,27 +17,37 @@ const Login = ({ setIsAdminLoggedIn }) => {
         e.preventDefault();
         setError('');
 
+        function wait(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        
         try {
             const response = await axios.post('/login', {
                 username,
                 password,
             });
-
+            toast.success('Login Successfull ! Redirecting... ', {
+            });
+            await wait(4000)
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('isAdminLoggedIn', 'true');
             setIsAdminLoggedIn(true);
 
             navigate('/dashboard');
-            console.log('Login successful', response.data.token);
+
+            console.log(response.data.token);
+
         } catch (err) {
-            setError('Invalid username or password');
+            toast.error('Failed to login', {
+            });
+            console.log(err);
         }
     };
 
     return (
         <div className='loginPageDiv'>
             <img src={login_page_image} alt='' id='login_page_image'></img>
-            
+            <ToastContainer />
             <form onSubmit={handleSubmit} className='adminloginFields'>
             <h2 id='loginWelcomeMessage'>Welcome Back, Admin!</h2>
                 <input
