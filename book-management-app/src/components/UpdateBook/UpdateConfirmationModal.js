@@ -118,6 +118,8 @@ import React, { useState, useEffect } from 'react';
 import axios from '../../axiosConfig';
 import { toast } from 'react-toastify';
 import './UpdateConfirmationModal.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const UpdateConfirmationModal = ({ bookId, onClose, onBookUpdated }) => {
     const [books, setBooks] = useState([]);
@@ -167,11 +169,16 @@ const UpdateConfirmationModal = ({ bookId, onClose, onBookUpdated }) => {
                 publicationDate,
                 coverImage,
             });
-            toast.success('Book updated successfully!');
+            //AK
+            toast.success('Book updated successfully!', {
+            });
+            //AK
             onBookUpdated(response.data);
             onClose();
         } catch (err) {
-            toast.error('Failed to update book.');
+            //AK
+            toast.error('Failed to update the book.', {
+            });
         }
     };
 
@@ -183,7 +190,7 @@ const UpdateConfirmationModal = ({ bookId, onClose, onBookUpdated }) => {
         <div className="modal-overlay">
             <div className="modal-content">
                 <h2>Update Book</h2>
-                <form onSubmit={handleUpdate}>
+                <form onSubmit={handleUpdate} className='modalInputFields'>
                     <div>
                         <label>Title:</label>
                         <input
@@ -213,6 +220,7 @@ const UpdateConfirmationModal = ({ bookId, onClose, onBookUpdated }) => {
                     <div>
                         <label>Publication Date:</label>
                         <input
+                        className='updateBookPublicationDate'
                             type="date"
                             value={publicationDate}
                             onChange={(e) => setPublicationDate(e.target.value)}
@@ -227,8 +235,13 @@ const UpdateConfirmationModal = ({ bookId, onClose, onBookUpdated }) => {
                             onChange={(e) => setCoverImage(e.target.value)}
                         />
                     </div>
-                    <button type="submit">Update Book</button>
-                    <button type="button" onClick={onClose}>Cancel</button>
+
+                    {/*AK*/}
+                    <ToastContainer/> 
+                    <div className='updateAllbuttons'>
+                        <button type="submit" className='updateBookButton'>Update</button>
+                        <button type="button" className='updateBookButton' onClick={onClose}>Cancel</button>
+                    </div>
                 </form>
             </div>
         </div>

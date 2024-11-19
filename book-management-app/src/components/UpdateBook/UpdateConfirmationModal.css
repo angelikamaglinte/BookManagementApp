@@ -1,26 +1,69 @@
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    
-    color: #1E1E1E;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 500px;
-    max-width: 100%;
-    
-  }
-  
-  button {
-    margin: 10px 0;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  color: #1E1E1E;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 100%;
+}
+
+.modalInputFields div{
+  padding-right: 15px;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+}
+
+.modalInputFields .updateBookPublicationDate {
+  width: 125px;
+}
+
+.modalInputFields label {
+  padding-top: 5px;
+  padding-bottom: 5px ;
+}
+
+.modalInputFields input,
+.modalInputFields textarea {
+  width: 100%;
+  padding: 8px;
+  padding-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.updateAllbuttons {
+  margin-top: 20px;
+  display: flexbox;  /* Use flexbox to handle alignment */
+  align-items: center;  /* Center buttons horizontally */
+  gap: 10px;  /* Add space between buttons */
+  padding-bottom: 5px;
+}
+
+.updateBookButton {
+  background-color: #1E1E1E;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px; /* Increase padding for better button size */
+  text-align: center;  /* Center text inside the button */
+  border-radius: 5px;  /* Optional: rounded corners for aesthetics */
+  width: 120px;  /* Set a fixed width to align buttons better */
+}
+
+.updateBookButton:hover {
+  color: #1E1E1E;
+  background-color: lightgray;
+}
