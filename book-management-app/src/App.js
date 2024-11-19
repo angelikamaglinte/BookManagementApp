@@ -65,6 +65,8 @@ import Dashboard from './components/Dashboard/Dashboard';
 import './App.css';
 import UserLandingPage from './userpages/UserLandingPage/UserLandingPage';
 import UserHomePage from './userpages/UserHomePage/UserHomePage';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
     const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);

@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import axios from '../../axiosConfig'
 import './AddBook.css'
 // import { useNavigate } from 'react-router-dom'
-// import { toast } from 'react-toastify'
+import { toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddBook = () => {
     const [title, setTitle] = useState('');
@@ -26,8 +28,9 @@ const AddBook = () => {
                 coverImage
             });
 
-            // TODO: show successful toast notification upon adding a new book
-
+            //show successful toast notification upon adding a new book
+            toast.success('Book added successfully!', {
+            });
             console.log(response.data);
 
             // clear fields after successfully adding the book
@@ -37,16 +40,16 @@ const AddBook = () => {
             setPublicationDate('');
             setCoverImage('');
         } catch (err) {
-            setError('Failed to add a new book.');
-
-            // TODO: show error toast notification if admin is not able to add a new book
-
+            //show error toast notification if admin is not able to add a new book
+            toast.error('Failed to add a new book. Please try again.', {
+            });
             console.log(err);
         }
     }
 
     return (
         <div>
+         
             <h2>Add a new book</h2>
             <form className='addBookForm' onSubmit={HandleAddBook}>
                 <div>
@@ -96,6 +99,7 @@ const AddBook = () => {
                         required
                     />
                 </div>
+                <ToastContainer />
                 <button type="submit" className='addBookButton'>Add Book</button>
             </form>
 
