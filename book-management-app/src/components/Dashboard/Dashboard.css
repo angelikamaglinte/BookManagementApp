@@ -1,17 +1,31 @@
 .dashboardHeading{
+    color: white;
     text-align: center;
     font-size: 50px;
+    height: 250px;
+    border-radius: 15px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     padding-bottom: 10px;
+    background-image: url('../../assets/login_Page_Image.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    /* margin-left: 2.5%; */
 }
 .dashboardContent{
     display: flex;
     justify-content: center;
+    width: 100%;
+    gap: 5%;
 }
 
 #dashboardBookCount{
     margin: 5px;
-font-size: 100px;
-font-weight: bolder;
+    font-size: 100px;
+    font-weight: bolder;
 }
 
 #dashboardQuote{
@@ -27,7 +41,7 @@ font-style: italic;
 }
 
 .dashboardCards{
-    width: 300px;
+    width: 400px;
     height: 250px;
     display: flex;
     flex-direction: column; 
@@ -36,7 +50,7 @@ font-style: italic;
     text-align: center;
     background: linear-gradient(180deg, #848484, #1e1e1e);
     color: white;
-    margin: 10px;
+    /* margin: 10px; */
     border-radius: 15px;
     
 }
