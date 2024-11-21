@@ -18,9 +18,9 @@ const LandingPage = () => {
 
                     <div className='landingPageSection1'>
                         
-                        <h1>Manage Your Library with Ease</h1>  
+                        <h1 className='landingpageTitles'>Manage Your Library with Ease</h1>  
 
-                         <p id='section1Description'> 
+                         <p id='section1Description' className='landingpageDescription'> 
                              As a Page Pilot Administrator, you have full control over your book collection. 
                              From adding new titles to updating existing entries or 
                              removing outdated books, 
@@ -32,19 +32,21 @@ const LandingPage = () => {
                     </div>
 
                     <div className='landingPageSection2'>
-                        <h1>Manage Your Library with Ease</h1>
-                        <p>
+                        <h1 className='landingpageTitles'>Manage Your Library with Ease</h1>
+                        <p className='landingpageDescription'>
                         Keep your catalog accurate and up to date, 
                         and ensure your readers always have access to the best information.
                         </p>
                     </div>
 
+
+                <div className='landingpageAfterSection2'>
                     <div className='landingPageSection3'>
                         <div className='section3Subsection1'>
                             
-                                <h1>Seamless Book Management</h1>
-                                <p id='section3Description'>     
-                                Take control of your library today with Page Pilot’s powerful admin tools.
+                                <h1 className='landingpageTitles'>Seamless Book <br></br> Management</h1>
+                                <p id='section3Description' className='landingpageDescription'>     
+                                Take control of your library today with Page Pilot’s powerful <br></br>admin tools.
                                 </p>
                            
                         </div>
@@ -58,8 +60,8 @@ const LandingPage = () => {
                             <img src={section4Image} className='section4Image' alt=''></img>
                         </div>
                         <div className='section4Subsection1'>
-                            <h1>Real-Time Updates</h1>
-                            <p id='section4Description'>     
+                            <h1 className='landingpageTitles'>Real-Time Updates</h1>
+                            <p id='section4Description' className='landingpageDescription'>     
                             Ensure your collection stays current and organized.
                             </p>
                         </div>
@@ -69,8 +71,8 @@ const LandingPage = () => {
                     <div className='landingPageSection5'>
                        
                         <div className='section5Subsection1'>
-                            <h1>User-Friendly Interface</h1>
-                            <p id='section5Description'>     
+                            <h1 className='landingpageTitles'>User-Friendly Interface</h1>
+                            <p id='section5Description' className='landingpageDescription'>     
                             Manage your library effortlessly, whether you’re overseeing a small collection or a large archive.
                             </p>
                         </div>
@@ -80,7 +82,7 @@ const LandingPage = () => {
                         </div>
                      
                     </div>
-
+                </div>
                     
 
                 </div>  
