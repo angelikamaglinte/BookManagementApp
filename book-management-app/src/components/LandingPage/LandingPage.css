@@ -1,9 +1,9 @@
-.landingpageTitles{
-    font-size: 50px;
+.landingpageTitles {
+    font-size: clamp(30px, 5vw, 60px); /* Scales between 30px and 60px based on screen width */
 }
 
-.landingpageDescription{
-    font-size: 20px;
+.landingpageDescription {
+    font-size: clamp(16px, 2vw, 24px); /* Scales between 16px and 24px */
 }
 
 .landingPageContent, html {
