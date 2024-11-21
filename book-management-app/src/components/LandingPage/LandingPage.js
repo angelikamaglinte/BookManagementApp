@@ -17,6 +17,7 @@ const LandingPage = () => {
                     </div>
 
                     <div className='landingPageSection1'>
+                        
                         <h1>Manage Your Library with Ease</h1>  
 
                          <p id='section1Description'> 
@@ -25,6 +26,7 @@ const LandingPage = () => {
                              removing outdated books, 
                              our intuitive admin dashboard makes library management simple and efficient. 
                          </p>
+                        
 
                         <img id='landingPageSection1Image' src={landingPageSection1Image} alt=''></img>
                     </div>
@@ -39,10 +41,12 @@ const LandingPage = () => {
 
                     <div className='landingPageSection3'>
                         <div className='section3Subsection1'>
-                            <h1>Seamless Book Management</h1>
-                            <p id='section3Description'>     
-                            Take control of your library today with Page Pilot’s powerful admin tools.
-                            </p>
+                            
+                                <h1>Seamless Book Management</h1>
+                                <p id='section3Description'>     
+                                Take control of your library today with Page Pilot’s powerful admin tools.
+                                </p>
+                           
                         </div>
                         <div className='section3Subsection2'>
                             <img src={section3Video} className='landingpageVideo' alt=''></img>
