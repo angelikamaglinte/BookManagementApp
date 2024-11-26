@@ -4,6 +4,8 @@ import styles from './BookList.module.css';
 import NavigationBar from '../NavigationBar/NavigationBar';
 import arrow_back_icon from '../../assets/arrow-back-icon.png';
 import Footer from '../Footer/Footer';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BookList = () => {
     const [books, setBooks] = useState([]);
@@ -19,6 +21,7 @@ const BookList = () => {
                 const response = await axios.get('http://localhost:7000/books');
                 setBooks(response.data);
                 setFilteredBooks(response.data);
+                
             } catch (err) {
                 setError('Could not fetch books. Please try again later.');
                 console.error('Error fetching books:', err);
@@ -46,11 +49,12 @@ const BookList = () => {
             );
             setFilteredBooks(filtered);
             setIsSearching(true);
-            if (filtered.length === 0) {
-                setError('No search results found.');
-            } else {
-                setError(null);
-            }
+            // if (filtered.length === 0) {
+            //     // setError('No search results found.');
+            //     console.log("No search results found.");
+            // } else {
+            //     setError(null);
+            // }
         } else {
             setFilteredBooks(books);
             setIsSearching(false);
@@ -66,7 +70,7 @@ const BookList = () => {
 
     const booksToShow = showMore ? filteredBooks : filteredBooks.slice(0, 25);
 
-    if (error) return <p>{error}</p>;
+    if (error) return <p className={styles['could-not-fetch-error']}>{error}</p>;
 
     return (
         <div className={styles['booklist-page-container']}>
@@ -85,9 +89,14 @@ const BookList = () => {
                     </div>
                 )}
 
+                {/* call here "Could not fetch books. Please try again later." */}
+
                 {/* Show "No search results" message if no books are found during search */}
                 {isSearching && filteredBooks.length === 0 ? (
-                    <p className={styles['no-results-message']}>No search results found.</p>
+                    // <p className={styles['no-results-message']}>No search results found.</p>
+                    <div className={styles['no-results-container']}>
+                        <p className={styles['no-results-message']} id='no-results-message'>No results found.</p>
+                    </div>
                 ) : (
                     Array.from({ length: Math.ceil(booksToShow.length / 5) }, (_, i) => (
                         <div className={styles['book-row']} key={i}>

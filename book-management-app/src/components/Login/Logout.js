@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa'
 import'./Logout.css'
 
 const Logout = ({ setIsAdminLoggedIn }) => {
@@ -16,7 +17,7 @@ const Logout = ({ setIsAdminLoggedIn }) => {
 
     return (
         <div>
-            <button onClick={handleLogout} className='logoutButton'>Logout</button>
+            <button onClick={handleLogout} className='logoutButton'>Logout &nbsp;&nbsp;<FaArrowRight size={18}/></button>
         </div>
     );
 };

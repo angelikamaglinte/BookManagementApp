@@ -307,6 +307,7 @@
     object-fit: cover; 
     border-radius: 4px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .book-title {
@@ -375,8 +376,8 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.admin-landing-page-feature2-container {
-    width: 500px;
+/* .admin-landing-page-feature2-container {
+    width: 700px;
 }
 
 .admin-landing-page-feature2 {
@@ -402,17 +403,18 @@
 .admin-landing-page-feature2-details {
     font-size: 32px;
     width: 700px;
+    padding-top: 20px;
 }
 
 .admin-landing-page-feature2 img {
     width: 800px;
     border-radius: 20px;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  
-}
+} */
 
 
-.admin-landing-page-feature3-container {
-    width: 500px;
+/* .admin-landing-page-feature3-container {
+    width: 250px;
 }
 
 .admin-landing-page-feature3 {
@@ -422,7 +424,7 @@
     justify-content: center; 
     padding-top: 10%;
     padding-bottom: 10%; 
-    gap: 200px;
+    gap: 50px;
 }
 
 .admin-landing-page-feature3-title,
@@ -440,10 +442,72 @@
 .admin-landing-page-feature3-details {
     font-size: 32px;
     width: 600px;
+    padding-top: 20px;
 }
 
 .admin-landing-page-feature3 img {
     width: 800px;
     border-radius: 20px;    
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+.admin-landing-page-feature2-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
 }
+
+.admin-landing-page-feature2-title {
+    margin-top: 7%;
+    margin-bottom: 0;
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-landing-page-feature2-details {
+    font-size: 32px;
+    text-align: center;
+    width: 550px;
+    padding: 30px;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-landing-page-feature2 img {
+    width: 1000px;
+    border-radius: 20px;    
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2%;
+} 
+
+.admin-landing-page-feature3-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.admin-landing-page-feature3-title {
+    margin-top: 7%;
+    margin-bottom: 0;
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-landing-page-feature3-details {
+    font-size: 32px;
+    text-align: center;
+    width: 550px;
+    padding: 30px;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-landing-page-feature3 img {
+    width: 1000px;
+    border-radius: 20px;   
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2%;
+    margin-bottom: 5%;
+} 

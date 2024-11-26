@@ -9,6 +9,7 @@ div.main-content {
 #adminSidebarLogo {
   width: 50%;
   margin-bottom: 8%;
+  cursor: pointer;
 }
 
 /* Sidebar container styling */

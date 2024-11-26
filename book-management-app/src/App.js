@@ -141,6 +141,7 @@ function App() {
 
     return (
         <div className="App">
+            <ToastContainer />
             {!hideSidebarAndLogout && isAdminLoggedIn && (
                 <div className="layout-container">
                     <Sidebar />

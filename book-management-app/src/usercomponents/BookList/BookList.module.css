@@ -1,5 +1,6 @@
 .booklist-page-container {
     background: linear-gradient(180deg, #FFFFFF, #E0C0FD);
+    overflow-x: hidden;
 }
 
 .book-list-container {
@@ -40,9 +41,31 @@
     margin-right: 8px;
 }
 
-.no-results-message {
+/* .no-results-message {
     font-size: 30px;
     margin-bottom: 5%;
+    color: #ff4d4d;
+    text-align: center !important;
+} */
+
+.no-results-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh; /* Makes the container span most of the viewport height */
+    text-align: center;
+}
+
+.no-results-message {
+    font-size: 1.5rem; /* Adjust as needed */
+    color: #333; /* Customize the text color */
+}
+
+.could-not-fetch-error {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .book-row {
@@ -56,6 +79,7 @@
     margin-bottom: 100px;
     border-radius: 50px;
     background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .book-card {

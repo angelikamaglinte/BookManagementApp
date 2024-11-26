@@ -1,9 +1,11 @@
 // import React, { useState, useEffect } from 'react';
 // import axios from '../../axiosConfig';
-// import { toast } from 'react-toastify';
 // import './UpdateConfirmationModal.css';
+// import { toast, ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 // const UpdateConfirmationModal = ({ bookId, onClose, onBookUpdated }) => {
+//     const [books, setBooks] = useState([]);
 //     const [title, setTitle] = useState('');
 //     const [author, setAuthor] = useState('');
 //     const [description, setDescription] = useState('');
@@ -12,28 +14,33 @@
 //     const [loading, setLoading] = useState(true);
 
 //     useEffect(() => {
-//         const fetchBookDetails = async () => {
+//         const fetchBooks = async () => {
 //             try {
-//                 const response = await axios.get(`/books/${bookId}`);
-//                 const { title, author, description, publicationDate, coverImage } = response.data;
-
-//                 setTitle(title);
-//                 setAuthor(author);
-//                 setDescription(description);
-//                 setPublicationDate(publicationDate);
-//                 setCoverImage(coverImage);
+//                 const response = await axios.get('/books');
+//                 setBooks(response.data); // Store all books
 //                 setLoading(false);
 //             } catch (err) {
-//                 console.error('Failed to fetch book details:', err);
+//                 console.error('Failed to fetch books:', err);
 //                 toast.error('Failed to fetch book details.');
 //                 setLoading(false);
 //             }
 //         };
 
-//         if (bookId) {
-//             fetchBookDetails();
+//         fetchBooks();
+//     }, []);
+
+//     useEffect(() => {
+//         if (books.length > 0) {
+//             const book = books.find(b => b.id === bookId); // Find the book by ID
+//             if (book) {
+//                 setTitle(book.title);
+//                 setAuthor(book.author);
+//                 setDescription(book.description);
+//                 setPublicationDate(book.publicationDate);
+//                 setCoverImage(book.coverImage);
+//             }
 //         }
-//     }, [bookId]);
+//     }, [books, bookId]);
 
 //     const handleUpdate = async (e) => {
 //         e.preventDefault();
@@ -45,22 +52,33 @@
 //                 publicationDate,
 //                 coverImage,
 //             });
-//             toast.success('Book updated successfully!');
+//             //AK
+//             toast.success('Book updated successfully!', {
+//                 position: 'top-right',
+//                 autoClose: 3000,
+//             });
+//             //AK
 //             onBookUpdated(response.data);
+//             onClose();
 //         } catch (err) {
-//             toast.error('Failed to update book.');
+//             //AK
+//             toast.error('Failed to update the book.', {
+//                 position: 'top-right',
+//                 autoClose: 3000
+//             });
 //         }
 //     };
 
 //     if (loading) {
-//         return <div>Loading...</div>;
+//         return <div className="modal-loading">Loading...</div>;
 //     }
 
 //     return (
 //         <div className="modal-overlay">
 //             <div className="modal-content">
+                
 //                 <h2>Update Book</h2>
-//                 <form onSubmit={handleUpdate}>
+//                 <form onSubmit={handleUpdate} className='modalInputFields'>
 //                     <div>
 //                         <label>Title:</label>
 //                         <input
@@ -90,6 +108,7 @@
 //                     <div>
 //                         <label>Publication Date:</label>
 //                         <input
+//                         className='updateBookPublicationDate'
 //                             type="date"
 //                             value={publicationDate}
 //                             onChange={(e) => setPublicationDate(e.target.value)}
@@ -104,8 +123,13 @@
 //                             onChange={(e) => setCoverImage(e.target.value)}
 //                         />
 //                     </div>
-//                     <button type="submit">Update Book</button>
-//                     <button type="button" onClick={onClose}>Cancel</button>
+
+//                     {/*AK*/}
+//                     <ToastContainer/> 
+//                     <div className='updateAllbuttons'>
+//                         <button type="submit" className='updateBookButton'>Update</button>
+//                         <button type="button" className='updateBookButton' onClick={onClose}>Cancel</button>
+//                     </div>
 //                 </form>
 //             </div>
 //         </div>
@@ -114,12 +138,11 @@
 
 // export default UpdateConfirmationModal;
 
+
 import React, { useState, useEffect } from 'react';
 import axios from '../../axiosConfig';
 import { toast } from 'react-toastify';
 import './UpdateConfirmationModal.css';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const UpdateConfirmationModal = ({ bookId, onClose, onBookUpdated }) => {
     const [books, setBooks] = useState([]);
@@ -169,15 +192,16 @@ const UpdateConfirmationModal = ({ bookId, onClose, onBookUpdated }) => {
                 publicationDate,
                 coverImage,
             });
-            //AK
             toast.success('Book updated successfully!', {
+                position: 'top-right',
+                autoClose: 3000,
             });
-            //AK
             onBookUpdated(response.data);
             onClose();
         } catch (err) {
-            //AK
             toast.error('Failed to update the book.', {
+                position: 'top-right',
+                autoClose: 3000,
             });
         }
     };
@@ -220,7 +244,7 @@ const UpdateConfirmationModal = ({ bookId, onClose, onBookUpdated }) => {
                     <div>
                         <label>Publication Date:</label>
                         <input
-                        className='updateBookPublicationDate'
+                            className='updateBookPublicationDate'
                             type="date"
                             value={publicationDate}
                             onChange={(e) => setPublicationDate(e.target.value)}
@@ -235,9 +259,6 @@ const UpdateConfirmationModal = ({ bookId, onClose, onBookUpdated }) => {
                             onChange={(e) => setCoverImage(e.target.value)}
                         />
                     </div>
-
-                    {/*AK*/}
-                    <ToastContainer/> 
                     <div className='updateAllbuttons'>
                         <button type="submit" className='updateBookButton'>Update</button>
                         <button type="button" className='updateBookButton' onClick={onClose}>Cancel</button>

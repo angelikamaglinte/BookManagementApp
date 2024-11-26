@@ -81,7 +81,7 @@ const UserLandingPage = () => {
                         muted
                         playsInline
                     >
-                        <source src="videos/browse-collection.mkv" type="video/mp4" />
+                        <source src="videos/user-browse-collection.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 {/* </div> */}

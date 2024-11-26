@@ -1,0 +1,68 @@
+.dashboardContainer {
+    width: 100%;
+    /* Control the overall width of the dashboard */
+    margin: 0 auto;
+    /* Center align the entire container */
+}
+
+.dashboardHeading {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    height: 250px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    padding-bottom: 10px;
+    background-image: url('../../assets/login_Page_Image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.dashboardContent {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.dashboardCards {
+    flex: 1;
+    max-width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    background: linear-gradient(180deg, #848484, #1e1e1e);
+    color: white;
+    border-radius: 15px;
+}
+
+#dashboardQuote {
+    width: 200px;
+    margin-top: 10%;
+    font-style: italic;
+    font-size: 18px;
+}
+
+#dashboardBookCount {
+    margin: 5px;
+    font-size: 100px;
+    font-weight: bolder;
+}
+
+#dashboardBookSuggestion{
+    margin-top: 10%;
+    font-size: 18px;
+}
+
+#dashboardAddBook {
+    margin-top: 10%;
+    font-size: 18px;
+}

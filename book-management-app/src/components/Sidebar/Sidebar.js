@@ -28,7 +28,7 @@ import admin_sidebar_logo from '../../assets/Page Pilot.png'
 const Sidebar = () => {
     return (
         <div className='sidebar'>
-            <img src={admin_sidebar_logo} alt='' id='adminSidebarLogo'/>
+            <a href="/dashboard"><img src={admin_sidebar_logo} alt='' id='adminSidebarLogo'/></a>
             <ul>
                 <div className='sidebarTabContainer'>
                 <li>

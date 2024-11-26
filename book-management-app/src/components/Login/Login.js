@@ -20,7 +20,7 @@ const Login = ({ setIsAdminLoggedIn }) => {
         function wait(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
         }
-        
+
         try {
             const response = await axios.post('/login', {
                 username,
@@ -38,9 +38,33 @@ const Login = ({ setIsAdminLoggedIn }) => {
             console.log(response.data.token);
 
         } catch (err) {
-            toast.error('Failed to login', {
-            });
-            console.log(err);
+            // toast.error('Failed to login', {
+            // });
+            // console.log(err);
+
+            if (err.response) {
+                if (err.response.status === 401) {
+                    // setError('Invalid username or password. Please try again.');
+                    console.log('Invalid username or password. Please try again.')
+                } else {
+                    setError('An error occured. Please try again.');
+                }
+                toast.error(err.response.data.message || 'Failed to login', {
+                    position: 'top-right',
+                    autoClose: 3000,
+                });
+            } else if (err.request) {
+                toast.error('Server is down. Please try again later.', {
+                    position: 'top-right',
+                    autoClose: 3000,
+                });
+            } else {
+                console.log('Login error: ', err);
+                toast.error('An unexpected error occured. Please try again.', {
+                    position: 'top-right',
+                    autoClose: 3000,
+                })
+            }
         }
     };
 
@@ -49,7 +73,7 @@ const Login = ({ setIsAdminLoggedIn }) => {
             <img src={login_page_image} alt='' id='login_page_image'></img>
             <ToastContainer />
             <form onSubmit={handleSubmit} className='adminloginFields'>
-            <h2 id='loginWelcomeMessage'>Welcome Back, Admin!</h2>
+                <h2 id='loginWelcomeMessage'>Welcome Back, Admin!</h2>
                 <input
                     type="text"
                     placeholder="Username"
@@ -66,9 +90,9 @@ const Login = ({ setIsAdminLoggedIn }) => {
                 />
                 {error && <p id='adminErrorMessage'>{error}</p>}
                 <button type="submit">Login</button>
-                
+
             </form>
-         
+
         </div>
     );
 };

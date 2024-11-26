@@ -160,7 +160,7 @@ const LandingPage = () => {
                             muted
                             playsInline
                         >
-                            <source src="video/browse-collection.mkv" type="video/mp4" className={styles['video-src']} />
+                            <source src="videos/admin-browse-collection.mp4" type="video/mp4" className={styles['video-src']} />
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -170,19 +170,20 @@ const LandingPage = () => {
                     <div className={styles['admin-landing-page-feature2-container']}>
                         <div className={styles['admin-landing-page-feature2-title']}>Real-Time Updates</div>
                         <div className={styles['admin-landing-page-feature2-details']}>Ensure your collection stays current and organized.</div>
+                        <img src={section4Image} alt="" />
                     </div>
-                    <img src={section4Image} alt="" />
+
                 </div>
                 {/* feature 3 */}
                 <div className={styles['admin-landing-page-feature3']}>
-                    <img src={section5Image} alt="" />
                     <div className={styles['admin-landing-page-feature3-container']}>
                         <div className={styles['admin-landing-page-feature3-title']}>User-Friendly Interface</div>
                         <div className={styles['admin-landing-page-feature3-details']}>Manage your library effortlessly, whether you're overseeing a small collection or a large archive.</div>
+                        <img src={section5Image} alt="" />
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

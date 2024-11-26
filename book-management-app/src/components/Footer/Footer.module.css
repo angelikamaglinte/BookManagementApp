@@ -3,25 +3,26 @@
     justify-content: space-around;
     width: 100%;
     background-color: black;
-    padding: 5% 0;
+    padding: 1% 0;
     color: white;
 }
 
 .admin-footer-column {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 .admin-footer-heading {
     font-weight: bold;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     font-size: 18px;
 }
 
 .admin-footer-container p {
-    margin: 0;
+    /* margin: 0; */
+    padding: 0px;
     font-size: 14px;
     color: #ccc;
 }
@@ -47,7 +48,7 @@
     border-top: 1px solid white;
     margin: 0 auto;
     justify-content: space-between;
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
     padding-top: 2%;
 }
 

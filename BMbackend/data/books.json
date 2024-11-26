@@ -398,5 +398,13 @@
     "description": "A spiritual novel that follows the journey of a young man in ancient India seeking enlightenment.",
     "publicationDate": "1922-09-06",
     "coverImage": "https://books.google.ca/books/content?id=putbK6p2o4sC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2HtTGnl5eABPpeH0BUEC5nh3lRWQ&w=1280"
+  },
+  {
+    "id": 51,
+    "title": "I Found You",
+    "author": "Lisa Jewell",
+    "description": "A novel where a woman discovers a man with no memory, a missing husband, and secrets that threaten to unravel their lives.",
+    "publicationDate": "2016-07-14",
+    "coverImage": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781501154607/i-found-you-9781501154607_hr.jpg"
   }
 ]
