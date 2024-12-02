@@ -63,6 +63,8 @@
 
 .could-not-fetch-error {
     text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
     align-items: center;
     justify-content: center;
     padding: 20px;
